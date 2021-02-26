@@ -1,6 +1,12 @@
 <html>
   <head>
+
+    <meta charset="UTF-8">
+
     <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
+    <script src="objLoader.js" ></script>
+    <script src="gltfLoader.js" ></script>
+    </script>
     <title> Engineers DVM </title>
     <link rel="shortcut icon" type="image/jpg" href="icon/avatar.png"/>
 
@@ -14,11 +20,20 @@
   </head>
   <body>
     <a-scene>
-      <a-box position="-1 0.5 -3" rotation="0 45 0" color="#4CC3D9"></a-box>
-      <a-sphere position="0 1.25 -5" radius="1.25" color="#EF2D5E"></a-sphere>
-      <a-cylinder position="1 0.75 -3" radius="0.5" height="1.5" color="#FFC65D"></a-cylinder>
+        <a-assets>
+          <a-asset-item id="cowlowpoly" src="3d_model/cow2/lowpolycow/cow.obj"></a-asset-item>
+        </a-assets>
+
+        <a-entity obj-model="obj: #cowlowpoly;" scale="0.001 0.001 0.001"  rotation="0.0 -90 0.0" position="0.0 0.0 -2.0"></a-entity>
+    
       <a-plane position="0 0 -4" rotation="-90 0 0" width="4" height="4" color="#7BC8A4"></a-plane>
-      <a-sky id="image-360" radius="10" src="icon/ContactSheetHDRICow.jpg"></a-sky>
+      <a-plane position="0 0 4" rotation="-90 0 0" width="4" height="4" color="#7BC8A4"></a-plane>
+      <a-plane position="4 0 0" rotation="-90 0 0" width="4" height="4" color="#7BC8A4"></a-plane>
+      <a-plane position="0 0 0" rotation="-90 0 0" width="4" height="4" color="#7BC8A4"></a-plane>
+      <a-plane position="-4 0 0" rotation="-90 0 0" width="4" height="4" color="#7BC8A4"></a-plane>
+
+ <!--        <a-sky id="image-360" radius="10" src="ContactSheetHDRICow.jpg"></a-sky>-->
+
     </a-scene>
   </body>
 </html>
