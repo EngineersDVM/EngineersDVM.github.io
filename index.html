@@ -39,6 +39,10 @@
           <a-asset-item id="cattleolored" src="3d_model/vegleges/karam/karam_robot.obj"></a-asset-item>
           <a-asset-item id="cattleolored-mtl" src="3d_model/vegleges/karam/karam_robot.mtl"></a-asset-item>
 
+          <!-- fejtartó -->
+          <a-asset-item id="fejpecek" src="vegleges/fejtarto_tovabbengedo/tinker.obj"></a-asset-item>
+          <a-asset-item id="fejpecek-mtl" src="vegleges/fejtarto_tovabbengedo/obj.mtl"></a-asset-item>
+          
           <!--tree-->
           <a-asset-item id="treelowpoly2" src="3d_model/low_poly_tree/Lowpoly_tree_sample.obj"></a-asset-item>
           <a-asset-item id="treelowpoly2-mtl" src="3d_model/low_poly_tree/Lowpoly_tree_sample.mtl"></a-asset-item>   
@@ -50,6 +54,7 @@
 
 
         <!-- főtehén -->
+        <a-entity id="fejtarto" obj-model="obj: #fejpecek; mtl: #fejpecek-mtl" scale="0.01 0.01 0.017" rotation="-90.0 0.0 0.0" position="-0.19 0.012 0.508"></a-entity>
         <a-entity id="karam" obj-model="obj: #cattleolored; mtl: #cattleolored-mtl" scale="0.01 0.013 0.01" rotation="0.0 0.0 0.0" position="-0.62 0.0 0.467"></a-entity>
 		<a-entity id="maincow" obj-model="obj: #cowcolored; mtl: #cowcolored-mtl" scale="0.05 0.05 0.05" rotation="0.0 -90.0 0.0" position="-1.15 0.02 -0.7"></a-entity>
         <!-- tehenek -->
