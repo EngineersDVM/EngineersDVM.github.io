@@ -31,6 +31,10 @@
           <!--<a-asset-item id="treelowpoly" src="ggvuw8aw3i0w-LowTree/Tree low.obj"></a-asset-item>
           <a-asset-item id="treelowpoly-mtl" src="ggvuw8aw3i0w-LowTree/Tree low.mtl"></a-asset-item>     -->     
 
+          <!-- maincow -->
+          <a-asset-item id="cowcolored" src="3d_model/cowcolored/bocika.obj"></a-asset-item>
+          <a-asset-item id="cowcolored-mtl" src="3d_model/cowcolored/bocika.mtl"></a-asset-item>
+
           <!--tree-->
           <a-asset-item id="treelowpoly2" src="3d_model/low_poly_tree/Lowpoly_tree_sample.obj"></a-asset-item>
           <a-asset-item id="treelowpoly2-mtl" src="3d_model/low_poly_tree/Lowpoly_tree_sample.mtl"></a-asset-item>   
@@ -41,7 +45,7 @@
         </a-assets>
 
 
-        <a-entity obj-model="obj: #cowlowpoly;" scale="0.001 0.001 0.001"   rotation="0.0 -90 0.0" position="0 0 0.0" color = "tomato"></a-entity>
+		<a-entity id="maincow" obj-model="obj: #cowcolored; mtl: #cowcolored-mtl" scale="0.05 0.05 0.05" rotation="0.0 -90.0 0.0" position="-1.15 0.02 -0.7"></a-entity>
         <!-- tehenek -->
         <a-entity obj-model="obj: #cowlowpoly;" scale="0.001 0.001 0.001"   rotation="0.0 -90 0.0" position="2 0.0 -20.0" animation="property: object3D.position.z; to: -6; delay: 200; dur: 5000; easing: linear; loop: false" sound="src: url(sound/cow_noise.mp3); autoplay: true; loop:true;" ></a-entity>
         <a-entity obj-model="obj: #cowlowpoly;" scale="0.001 0.001 0.001"   rotation="0.0 -90 0.0" position="0.0 0.0 -18.0" animation="property: object3D.position.z; to: -2; delay: 100; dur: 5000; easing: linear; loop: false" sound="src: url(sound/cow_noise.mp3); autoplay: true; delay:200; loop:true;" ></a-entity>
