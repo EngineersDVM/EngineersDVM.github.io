@@ -1,0 +1,151 @@
+<html>
+  <head>
+
+    <meta charset="UTF-8">
+
+    <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
+
+    <script src="objLoader.js" >  </script>
+    <script src="gltfLoader.js" > </script>
+    <script src="fbxLoader.js">   </script>
+    
+    <title> Engineers DVM </title>
+
+  </head>
+  <body>
+    <a-scene>
+        <a-assets>
+          <!--
+          <a-asset-item id="cow-obj" src="cow/cowTM08New00RTime02.obj"></a-asset-item>
+          <a-asset-item id="cow-mtl" src="cow/cowTM08New00RTime02.mtl"></a-asset-item>-->
+          
+          <a-asset-item id="cowlowpoly" src="cow2/lowpolycow/cow.obj"></a-asset-item>
+
+          <!-- főtehén -->
+          <a-asset-item id="cowcolored" src="cowcolored/bocika.obj"></a-asset-item>
+          <a-asset-item id="cowcolored-mtl" src="cowcolored/bocika.mtl"></a-asset-item>
+
+          <!-- karám -->
+          <a-asset-item id="cattleolored" src="vegleges/karam/karam_robot.obj"></a-asset-item>
+          <a-asset-item id="cattleolored-mtl" src="vegleges/karam/karam_robot.mtl"></a-asset-item>
+
+          <!-- fejtartó -->
+<!--          <a-asset-item id="fejpecek" src="vegleges/fejtarto_tovabbengedo/tinker.obj"></a-asset-item>
+          <a-asset-item id="fejpecek-mtl" src="vegleges/fejtarto_tovabbengedo/obj.mtl"></a-asset-item>-->
+          <a-asset-item id="fejpecek" src="vegleges/fejtarto_tovabbengedo/kapu.obj"></a-asset-item>
+          <a-asset-item id="fejpecek-mtl" src="vegleges/fejtarto_tovabbengedo/kapu.mtl"></a-asset-item>
+
+          <!-- pinewood-->
+          <a-asset-item id="pinelowpoly" src="tree/lowpolytree.obj"></a-asset-item>
+          <a-asset-item id="pinelowpoly-mtl" src="tree/lowpolytree.mtl"></a-asset-item>
+
+          <!--tree - grey -->
+          <!--<a-asset-item id="treelowpoly" src="ggvuw8aw3i0w-LowTree/Tree low.obj"></a-asset-item>
+          <a-asset-item id="treelowpoly-mtl" src="ggvuw8aw3i0w-LowTree/Tree low.mtl"></a-asset-item>     -->
+
+          <!--tree-->
+          <a-asset-item id="treelowpoly2" src="low_poly_tree/Lowpoly_tree_sample.obj"></a-asset-item>
+          <a-asset-item id="treelowpoly2-mtl" src="low_poly_tree/Lowpoly_tree_sample.mtl"></a-asset-item>   
+
+          <!--scene-->
+          <a-asset-item id="scene" src="77-low-poly-tree/obj/low-poly-tree.obj"></a-asset-item>
+          <a-asset-item id="scene-mtl" src="77-low-poly-tree/obj/low-poly-tree.mtl"></a-asset-item>          
+        </a-assets>
+
+        <!-- főtehén -->
+        <a-entity id="fejtarto" obj-model="obj: #fejpecek; mtl: #fejpecek-mtl" scale="0.01 0.013 0.01" rotation=" 0.0 15.0 0.0" position="0.282 -0.028 1.405"></a-entity>
+        <!--<a-entity id="fejtarto" obj-model="obj: #fejpecek; mtl: #fejpecek-mtl" scale="0.01 0.01 0.0125" rotation="-90.0 0.0 0.0" position="-0.19 0.012 0.508"></a-entity>-->
+        <a-entity id="karam" obj-model="obj: #cattleolored; mtl: #cattleolored-mtl" scale="0.01 0.013 0.01" rotation="0.0 0.0 0.0" position="-0.62 0.0 0.467"></a-entity>
+        <a-entity id="maincow" obj-model="obj: #cowcolored; mtl: #cowcolored-mtl" scale="0.05 0.0435 0.05" rotation="0.0 -90.0 0.0" position="-1.15 -0.086 -0.7"></a-entity>
+
+
+
+        <!-- tehenek -->
+        <a-entity obj-model="obj: #cowlowpoly;" scale="0.001 0.001 0.001"   rotation="0.0 -90 0.0" position="2 0.0 -20.0" animation="property: object3D.position.z; to: -6; delay: 200; dur: 5000; easing: linear; loop: false" sound="src: url(sound/cow_noise.mp3); autoplay: true; loop:true;" ></a-entity>
+        <a-entity obj-model="obj: #cowlowpoly;" scale="0.001 0.001 0.001"   rotation="0.0 -90 0.0" position="0.0 0.0 -18.0" animation="property: object3D.position.z; to: -2; delay: 100; dur: 5000; easing: linear; loop: false" sound="src: url(sound/cow_noise.mp3); autoplay: true; delay:200; loop:true;" ></a-entity>
+
+
+
+
+        <!-- fa csoport előre -->
+        <!-- <a-entity obj-model="obj: #pinelowpoly;  mtl: #pinelowpoly-mtl"     rotation="0.0 -90 0.0" position="5.0 0.0 -20.0"></a-entity>
+        <a-entity obj-model="obj: #pinelowpoly;  mtl: #pinelowpoly-mtl"     rotation="0.0 -90 0.0" position="3.0 0.0 -20.0"></a-entity>-->
+        <a-entity obj-model="obj: #treelowpoly2;  mtl: #treelowpoly2-mtl" scale="0.1 0.1 0.1"     rotation="0.0 -90 0.0" position="3.0 0.0 -20.0"></a-entity>
+        <a-entity obj-model="obj: #treelowpoly2;  mtl: #treelowpoly2-mtl" scale="0.1 0.1 0.1"     rotation="0.0 15 0.0" position="5.0 0.0 -20.0"></a-entity>
+        <a-entity obj-model="obj: #treelowpoly2;  mtl: #treelowpoly2-mtl" scale="0.04 0.04 0.04"     rotation="0.0 0 0.0" position="4.0 0.0 -20.0"></a-entity>
+
+
+        <!--<a-entity obj-model="obj: #treelowpoly;  mtl: #treelowpoly-mtl" scale="0.01 0.01 0.01"     rotation="0.0 -90 0.0" position="-5.0 0.0 -5.0"></a-entity>-->
+        <a-entity obj-model="obj: #treelowpoly2;  mtl: #treelowpoly2-mtl" scale="0.1 0.1 0.1"     rotation="0.0 -90 0.0" position="-5.0 0.0 -5.0"></a-entity>
+
+
+        <a-entity obj-model="obj: #scene;  mtl: #scene-mtl" scale="0.8 0.8 0.8"     rotation="0.0 -90 0.0" position="-5.0 0.0 50.0"></a-entity>
+        <a-entity obj-model="obj: #scene;  mtl: #scene-mtl" scale="0.8 0.8 0.8"     rotation="0.0 90 0.0" position="-8.0 0.0 50.0"></a-entity>
+        <a-entity obj-model="obj: #scene;  mtl: #scene-mtl" scale="0.8 0.8 0.8"     rotation="0.0 70 0.0" position="-15.0 0.0 50.0"></a-entity>
+        <a-entity obj-model="obj: #treelowpoly2;  mtl: #treelowpoly2-mtl" scale="0.1 0.1 0.1"     rotation="0.0 10 0.0" position="-11.7 0.0 35.0"></a-entity>
+        <a-plane position="-11.7 0 34.6" rotation="-90 110 0" width="4" height="4" color="#7BC8A4"></a-plane>
+        <a-plane position="-6.37 0 49.6" rotation="-90 110 0" width="4" height="4" color="#7BC8A4"></a-plane>
+        <a-plane position="-14.0 0 49.7" rotation="-90 110 0" width="4" height="4" color="#7BC8A4"></a-plane>
+
+        <!--<a-entity obj-model="obj: #cow-obj;  mtl: #cow-mtl"  scale="0.01 0.01 0.01"></a-entity>-->
+
+        <!-- fa és tehéncsoport -->
+        <a-plane position="-16.4 0.0 -22.0" rotation="-90 26 0" width="4" height="4" color="#7BC8A4"></a-plane>
+        <a-entity obj-model="obj: #cowlowpoly;" scale="0.001 0.001 0.001"   rotation="0.0 -20 0.0" position="-17.8 0.0 -22.63"  animation="property: object3D.position.x; to: -16.1; delay: 400; dur: 5000; easing: linear; loop: false"></a-entity>
+        <a-entity obj-model="obj: #cowlowpoly;" scale="0.001 0.001 0.001"   rotation="0.0 -50 0.0" position="-16.4 0.0 -23.63"></a-entity>
+        <a-entity obj-model="obj: #treelowpoly2;  mtl: #treelowpoly2-mtl" scale="0.1 0.1 0.1"     rotation="0.0 -90 0.0" position="-18.8 0.0 -22.6"></a-entity>
+
+
+      <a-plane position="0 0 -4" rotation="-90 0 0" width="4" height="4" color="#7BC8A4"></a-plane>
+      <a-plane position="0 0 4" rotation="-90 0 0" width="4" height="4" color="#7BC8A4"></a-plane>
+      <a-plane position="4 0 0" rotation="-90 0 0" width="4" height="4" color="#7BC8A4"></a-plane>
+      <a-plane position="-4 0 0" rotation="-90 0 0" width="4" height="4" color="#7BC8A4"></a-plane>
+      <a-plane position="0 0 0" rotation="-90 0 0" width="4" height="4" color="#7BC8A4"></a-plane>
+      <a-plane position="-3 0 -3" rotation="-90 0 0" scale="0.5 0.5 0.5" width="4" height="4" color="#67ab8b"></a-plane>
+      <a-plane position="3 0 3" rotation="-90 0 0" scale="0.5 0.5 0.5" width="4" height="4" color="#67ab8b"></a-plane>
+      <a-plane position="-3 0 3" rotation="-90 0 0" scale="0.5 0.5 0.5" width="4" height="4" color="#67ab8b"></a-plane>
+      <a-plane position="3 0 -3" rotation="-90 0 0" scale="0.5 0.5 0.5" width="4" height="4" color="#67ab8b"></a-plane>
+      <a-plane position="0 -1 0" rotation="-90 0 0" width="4" height="4" scale="50 50 50" color="#50b685"></a-plane>
+
+<!---
+      <a-entity>
+        <a-box color="#82c8ed" depth="2" height="1" width="3" opacity="0.75">
+          <a-animation attribute="position" from="0 100 0" to="-10 -10 -10"  loop= "true">
+            
+          </a-animation>
+          </a-box>
+      </a-entity>-->
+
+        <!-- felhők -->
+        <a-entity>
+          <a-box animation="property: object3D.position.z; to: 340; dur: 36000; loop: NaN" position="-280 240 197.123017487099" color="white" opacity="0.25" width="18" depth="28" height="6" material="" geometry=""></a-box>
+          <a-box animation="property: object3D.position.z; to: 120; delay: 12000; dur: 48000; easing: linear; loop: true" position="5 32 118.475" color="white" opacity="0.65" width="8" depth="12" height="4" material="" geometry=""></a-box>
+
+          <a-box animation="property: object3D.position.z; to: 340; dur: 36000; loop: NaN" position="-280 240 -197.123017487099" color="white" opacity="0.25" width="18" depth="28" height="6" material="" geometry=""></a-box>
+          <a-box animation="property: object3D.position.z; to: 120; delay: 12000; dur: 48000; easing: linear; loop: true" position="5 32 -118.475" color="white" opacity="0.65" width="8" depth="12" height="4" material="" geometry=""></a-box>
+
+          <a-box animation="property: object3D.position.z; to: 100; delay: 1000; dur: 36000" event-set__loaded="[object Object]" position="10 12 100" color="white" opacity="0.75" width="6" depth="9" height="4" visible="" material="" geometry="" _delay="1000"></a-box>
+          <a-box animation="property: object3D.position.z; to: 120; delay: 200; dur: 52000; easing: linear; loop: NaN" position="20 16 116.8153846153846" color="white" opacity="0.5" width="8" depth="12" height="3" material="" geometry=""></a-box>
+          <a-box animation="property: object3D.position.z; to: 120; delay: 200; dur: 50000; easing: linear; loop: true" position="-20 18 -32.5002" color="white" opacity="0.8" width="8" depth="12" height="3" material="" geometry=""></a-box>
+          <a-box animation="property: object3D.position.z; to: 120; delay: 20000; dur: 48000" position="26 20 120" color="white" opacity="0.75" width="5" depth="7" height="3" material="" geometry=""></a-box>
+
+          <a-box id="mycloud" animation="property: object3D.position.z; to: 120; delay: 200; dur: 50000; easing: linear; loop: true" position="-15 18 -32.5002" color="white" opacity="1" width="5" depth="5" height="3" material="" geometry=""></a-box>
+          <a-box id="mycloud2" animation="property: object3D.position.z; to: 120; delay: 200; dur: 50000; easing: linear; loop: true" position="-50 30 -62.5002" color="white" opacity="0.4" width="8" depth="12" height="3" material="" geometry=""></a-box>
+          <a-box id="mycloud3" animation="property: object3D.position.z; to: 120; delay: 200; dur: 50000; easing: linear; loop: true" position="50 30 -72.5002" color="white" opacity="0.3" width="8" depth="12" height="3" material="" geometry=""></a-box>
+
+        </a-entity>
+        <a-sky color="#24CAFF"></a-sky>
+
+        <a-camera id="cam"></a-camera>
+
+        <!--
+        <a-camera position="0 1.6 0" animation="property: object3D.position.z; to: 120; delay: 200; dur: 50000; easing: linear; loop: true" position="-50 30 -62.5002"></a-camera>-->
+        <!--<a-camera wasd-controls-enabled="false" look-controls="reverseMouseDrag:true">
+            <a-animation attribute="position" dur="2000" easing="linear" to="0 1.6 -10"></a-animation>
+        </a-camera>
+
+        <a-sky id="image-360" radius="10" src="ContactSheetHDRICow.jpg"></a-sky>-->
+    </a-scene>
+  </body>
+    <script src="cameramovement.js">   </script>
+</html>
